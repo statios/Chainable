@@ -1,15 +1,15 @@
-class Chain<Origin> {
-  var origin: Origin
+public class Chain<Origin> {
+  public var origin: Origin
   
-  init(origin: Origin) {
+  public init(origin: Origin) {
     self.origin = origin
   }
 }
 
-protocol Chainable { }
+public protocol Chainable { }
 
-extension Chainable {
-  func asChainable() -> Chain<Self> {
+public extension Chainable {
+  public func asChainable() -> Chain<Self> {
     return Chain(origin: self)
   }
 }
