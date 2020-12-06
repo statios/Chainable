@@ -2,14 +2,58 @@
 
 ## Usage
 
+```swift
+UIButton().asChainable()
+  .setTitle("Done", for: .normal)
+  .background(color: .red)
+  .add(to: view)
+  .makeConstraints { (make) in
+    make.center.equalToSuperview()
+    make.size.equalTo(100)
+  }
+```
+
+Want to use with your own types? Just make extensions.
+
+```swift
+import Chainable
+
+class Person {
+  var name: String?
+  var age: Int?
+}
+
+extension Person: Chainable { }
+
+extension Chain where Origin == Person {
+  @discardableResult
+  func setName(_ name: String?) -> Chain {
+    self.origin.name = name
+    return self
+  }
+  @discardableResult
+  func setAge(_ age: Int?) -> Chain {
+    self.origin.age = age
+    return self
+  }
+}
+```
+
+```swift
+let myPerson = Person()
+
+myPerson.asChainable()
+  .setAge(29)
+  .setName("STAT")
+```
+
 ## Installation
 
 ### Swift package manager
 
 ```swift
 dependencies: [
-  .Package(url: "https://github.com/statios/Chainable.git", .upToNextMajor(from: "1.0.3")),
-  .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1"))
+  .Package(url: "https://github.com/statios/Chainable", majorVersion: 1)
 ]
 ```
 
