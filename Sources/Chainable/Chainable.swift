@@ -1,3 +1,10 @@
+//
+//  Chainable.swift
+//  Chainable
+//
+//  Created by stat on 2020/12/06.
+//
+
 public class Chain<Origin> {
   public var origin: Origin
   
@@ -13,3 +20,4 @@ public extension Chainable {
     return Chain(origin: self)
   }
 }
+
