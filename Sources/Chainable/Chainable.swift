@@ -9,7 +9,7 @@ public class Chain<Origin> {
 public protocol Chainable { }
 
 public extension Chainable {
-  public func asChainable() -> Chain<Self> {
+  func asChainable() -> Chain<Self> {
     return Chain(origin: self)
   }
 }
