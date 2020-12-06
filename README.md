@@ -1,6 +1,12 @@
 # Chainable
 
-## Usage
+![Chainable%20c8603464fa59447a8ee7bacf6e0ec65d/Chainable.png](Chainable%20c8603464fa59447a8ee7bacf6e0ec65d/Chainable.png)
+
+✨Provides improved syntax for setting UIKit properties.
+
+## 📝 Usage
+
+Basic usage with auto layout
 
 ```swift
 UIButton().asChainable()
@@ -47,7 +53,7 @@ myPerson.asChainable()
   .setName("STAT")
 ```
 
-## Installation
+## 🛠 Installation
 
 ### Swift package manager
 
@@ -61,6 +67,6 @@ dependencies: [
 
 If you prefer not to use either of the aforementioned dependency managers, you can integrate Chainable into your project manually.
 
-## License
+## 📄 License
 
 Chainable is released under the MIT license. See LICENSE for details.
