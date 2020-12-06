@@ -15,8 +15,8 @@ public class Chain<Origin> {
 
 public protocol Chainable { }
 
-public extension Chainable {
-  func asChainable() -> Chain<Self> {
+extension Chainable {
+  public func asChainable() -> Chain<Self> {
     return Chain(origin: self)
   }
 }
