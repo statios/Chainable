@@ -8,7 +8,7 @@
 
 ```swift
 dependencies: [
-  .Package(url: "https://github.com/statios/Chainable.git", .upToNextMajor(from: "1.0.2")),
+  .Package(url: "https://github.com/statios/Chainable.git", .upToNextMajor(from: "1.0.3")),
   .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1"))
 ]
 ```
